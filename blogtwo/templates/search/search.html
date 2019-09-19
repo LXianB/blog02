@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/mystyle.css">
+
+</head>
+<body>
+        <div class="col-md-8">
+            <!-- 文章列表 开始 -->
+            <div class="article-list">
+                {% for item in page %}
+                    <div class="article">
+                        <h3><a href="/article/detail/{{ item.object.user.username }}/{{ item.object.pk }}/">{{ item.object.title }}</a></h3>
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="#">
+                                    <img class="media-object author-img" src="/article/media/{{ item.object.user.avatar }}" alt="...">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <p>{{ item.object.desc|safe }}</p>
+                            </div>
+                        </div>
+                        <div class="article-footer">
+                            <span><a href="/user/{{ item.object.user.username }}/">{{ item.object.user.username }}</a></span>发布于
+                            <span>{{ item.object.create_time|date:'Y-m-d H:i:s' }}</span>
+{#                            <span class="glyphicon glyphicon-comment">评论({{ article.comment_count }})</span>#}
+{#                            <span class="glyphicon glyphicon-thumbs-up">点赞({{ article.up_count }})</span>#}
+                            <span><i class="fa fa-commenting-o fa-fw" aria-hidden="true"></i>评论({{ item.object.comment_count }})</span>
+                            <span><i class="fa fa-thumbs-o-up fa-fw" aria-hidden="true"></i>点赞({{ item.object.up_count }})</span>
+                            <span><i class="glyphicon glyphicon-new-window " aria-hidden="true"></i>转发({{ item.object.zhuan_count }})</span>
+                        </div>
+                        <hr>
+                    </div>
+                {% endfor %}
+
+            </div>
+        </div>
+        <!-- 文章列表 结束-->
+            <div class="pagenation">
+                {% if page.has_previous %}
+                    <a href="/article/search?q={{ query }}&page={{ page.previous_page_number }}">上一页</a>
+                    {% endif %}
+                    {% for pindex in paginator.page_range %}
+                        {% if pindex == page.number %}
+                        <a href="/article/search?q={{ query }}&page={{ pindex }}" class="active">{{ pindex }}</a>
+                        {% else %}
+                        <a href="/article/search?q={{ query }}&page={{ pindex }}">{{ pindex }}</a>
+                        {% endif %}
+                    {% endfor %}
+                    {% if spage.has_next %}
+                        <a href="/article/search?q={{ query }}&page={{ page.next_page_number }}">下一页</a>
+                    {% endif %}
+            </div>
+
+</div>
+<!-- 主页面 结束-->
+
+<script src="/static/jquery-3.3.1.js"></script>
+<script src="/static/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

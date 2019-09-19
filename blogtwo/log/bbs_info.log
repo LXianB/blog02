@@ -1,0 +1,2396 @@
+[2018-05-25 16:51:10,091][Thread-1:3476][task_id:collect][views.py:282][INFO][得到年和月的参数啦！！！！]
+[2018-05-25 16:54:36,822][Thread-1:7356][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /blog/xiaohei/archive/2018x05/]
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python10\day78\bbs\blog\views.py", line 281, in home
+    year, month = args[1].split("-")
+ValueError: not enough values to unpack (expected 2, got 1)
+[2018-05-25 16:56:32,723][Thread-1:8112][task_id:blog.views][views.py:290][ERROR][请求访问的日期归档格式不正确！！！]
+[2018-05-25 16:56:39,854][Thread-3:6132][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /blog/xiaohei/archive/2018-05-/]
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python10\day78\bbs\blog\views.py", line 282, in home
+    year, month = args[1].split("-")
+ValueError: too many values to unpack (expected 2)
+[2018-05-25 16:57:44,421][Thread-1:5596][task_id:blog.views][views.py:290][WARNING][请求访问的日期归档格式不正确！！！]
+[2018-05-25 16:57:44,421][Thread-1:5596][task_id:blog.views][views.py:291][WARNING][too many values to unpack (expected 2)]
+[2018-05-28 08:41:53,683][Thread-11:6448][task_id:django.request][base.py:152][WARNING][Not Found: /favicon.ico]
+[2018-05-28 08:42:19,143][Thread-13:6564][task_id:django.request][base.py:152][WARNING][Not Found: /blog/]
+[2018-05-28 10:12:02,507][Thread-186:7096][task_id:requests.packages.urllib3.connectionpool][connectionpool.py:214][INFO][Starting new HTTP connection (1): api.geetest.com]
+[2018-05-28 10:12:23,218][Thread-188:2116][task_id:requests.packages.urllib3.connectionpool][connectionpool.py:214][INFO][Starting new HTTP connection (1): api.geetest.com]
+[2018-05-28 10:32:54,986][Thread-12:6200][task_id:django.security.csrf][csrf.py:160][WARNING][Forbidden (CSRF token missing or incorrect.): /blog/up_down]
+[2018-05-28 10:35:21,048][Thread-33:192][task_id:blog.views][views.py:249][WARNING][又有人访问不存在页面了...]
+[2018-05-28 10:47:42,388][Thread-12:5696][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /blog/up_down/]
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python10\day78\bbs\blog\views.py", line 349, in up_down
+    models.ArticleUpDown.objects.create(user=user,article_id=article_id,is_up=is_up)
+  File "C:\Python36\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python36\lib\site-packages\django\db\models\query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "C:\Python36\lib\site-packages\django\db\models\base.py", line 555, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "C:\Python36\lib\site-packages\django\db\models\fields\related_descriptors.py", line 216, in __set__
+    self.field.remote_field.model._meta.object_name,
+ValueError: Cannot assign "<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000000000BDAE9B0>>": "ArticleUpDown.user" must be a "UserInfo" instance.
+[2018-05-28 10:49:05,554][Thread-20:7108][task_id:requests.packages.urllib3.connectionpool][connectionpool.py:214][INFO][Starting new HTTP connection (1): api.geetest.com]
+[2018-05-28 10:49:22,398][Thread-21:3816][task_id:requests.packages.urllib3.connectionpool][connectionpool.py:214][INFO][Starting new HTTP connection (1): api.geetest.com]
+[2018-05-29 08:38:27,049][Thread-8:7120][task_id:django.request][base.py:152][WARNING][Not Found: /favicon.ico]
+[2018-05-29 08:55:22,891][Thread-21:1380][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /blog/up_down/]
+Traceback (most recent call last):
+  File "D:\python10\day78\bbs\blog\views.py", line 352, in up_down
+    models.ArticleUpDown.objects.create(user=user,article_id=article_id,is_up=is_up)
+  File "C:\Python36\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python36\lib\site-packages\django\db\models\query.py", line 394, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Python36\lib\site-packages\django\db\models\base.py", line 808, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Python36\lib\site-packages\django\db\models\base.py", line 838, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "C:\Python36\lib\site-packages\django\db\models\base.py", line 924, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Python36\lib\site-packages\django\db\models\base.py", line 963, in _do_insert
+    using=using, raw=raw)
+  File "C:\Python36\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python36\lib\site-packages\django\db\models\query.py", line 1076, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Python36\lib\site-packages\django\db\models\sql\compiler.py", line 1106, in execute_sql
+    for sql, params in self.as_sql():
+  File "C:\Python36\lib\site-packages\django\db\models\sql\compiler.py", line 1059, in as_sql
+    for obj in self.query.objs
+  File "C:\Python36\lib\site-packages\django\db\models\sql\compiler.py", line 1059, in <listcomp>
+    for obj in self.query.objs
+  File "C:\Python36\lib\site-packages\django\db\models\sql\compiler.py", line 1058, in <listcomp>
+    [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+  File "C:\Python36\lib\site-packages\django\db\models\sql\compiler.py", line 998, in prepare_value
+    value = field.get_db_prep_save(value, connection=self.connection)
+  File "C:\Python36\lib\site-packages\django\db\models\fields\related.py", line 963, in get_db_prep_save
+    return self.target_field.get_db_prep_save(value, connection=connection)
+  File "C:\Python36\lib\site-packages\django\db\models\fields\__init__.py", line 770, in get_db_prep_save
+    prepared=False)
+  File "C:\Python36\lib\site-packages\django\db\models\fields\__init__.py", line 958, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "C:\Python36\lib\site-packages\django\db\models\fields\__init__.py", line 966, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: '{{ article.pk }}'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python10\day78\bbs\blog\views.py", line 357, in up_down
+    response["fisrt_action"]=models.ArticleUpDown.objects.filter(user=user,article_id=article_id).first().is_up
+  File "C:\Python36\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python36\lib\site-packages\django\db\models\query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Python36\lib\site-packages\django\db\models\query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Python36\lib\site-packages\django\db\models\sql\query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Python36\lib\site-packages\django\db\models\sql\query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "C:\Python36\lib\site-packages\django\db\models\sql\query.py", line 1206, in build_filter
+    condition = lookup_class(lhs, value)
+  File "C:\Python36\lib\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Python36\lib\site-packages\django\db\models\fields\related_lookups.py", line 112, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "C:\Python36\lib\site-packages\django\db\models\fields\__init__.py", line 966, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: '{{ article.pk }}'
+[2018-05-29 08:55:24,182][Thread-22:6636][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /blog/up_down/]
+Traceback (most recent call last):
+  File "D:\python10\day78\bbs\blog\views.py", line 352, in up_down
+    models.ArticleUpDown.objects.create(user=user,article_id=article_id,is_up=is_up)
+  File "C:\Python36\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python36\lib\site-packages\django\db\models\query.py", line 394, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Python36\lib\site-packages\django\db\models\base.py", line 808, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Python36\lib\site-packages\django\db\models\base.py", line 838, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "C:\Python36\lib\site-packages\django\db\models\base.py", line 924, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Python36\lib\site-packages\django\db\models\base.py", line 963, in _do_insert
+    using=using, raw=raw)
+  File "C:\Python36\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python36\lib\site-packages\django\db\models\query.py", line 1076, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Python36\lib\site-packages\django\db\models\sql\compiler.py", line 1106, in execute_sql
+    for sql, params in self.as_sql():
+  File "C:\Python36\lib\site-packages\django\db\models\sql\compiler.py", line 1059, in as_sql
+    for obj in self.query.objs
+  File "C:\Python36\lib\site-packages\django\db\models\sql\compiler.py", line 1059, in <listcomp>
+    for obj in self.query.objs
+  File "C:\Python36\lib\site-packages\django\db\models\sql\compiler.py", line 1058, in <listcomp>
+    [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+  File "C:\Python36\lib\site-packages\django\db\models\sql\compiler.py", line 998, in prepare_value
+    value = field.get_db_prep_save(value, connection=self.connection)
+  File "C:\Python36\lib\site-packages\django\db\models\fields\related.py", line 963, in get_db_prep_save
+    return self.target_field.get_db_prep_save(value, connection=connection)
+  File "C:\Python36\lib\site-packages\django\db\models\fields\__init__.py", line 770, in get_db_prep_save
+    prepared=False)
+  File "C:\Python36\lib\site-packages\django\db\models\fields\__init__.py", line 958, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "C:\Python36\lib\site-packages\django\db\models\fields\__init__.py", line 966, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: '{{ article.pk }}'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python10\day78\bbs\blog\views.py", line 357, in up_down
+    response["fisrt_action"]=models.ArticleUpDown.objects.filter(user=user,article_id=article_id).first().is_up
+  File "C:\Python36\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python36\lib\site-packages\django\db\models\query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Python36\lib\site-packages\django\db\models\query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Python36\lib\site-packages\django\db\models\sql\query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Python36\lib\site-packages\django\db\models\sql\query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "C:\Python36\lib\site-packages\django\db\models\sql\query.py", line 1206, in build_filter
+    condition = lookup_class(lhs, value)
+  File "C:\Python36\lib\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Python36\lib\site-packages\django\db\models\fields\related_lookups.py", line 112, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "C:\Python36\lib\site-packages\django\db\models\fields\__init__.py", line 966, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: '{{ article.pk }}'
+[2018-05-29 08:55:25,009][Thread-23:7120][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /blog/up_down/]
+Traceback (most recent call last):
+  File "D:\python10\day78\bbs\blog\views.py", line 352, in up_down
+    models.ArticleUpDown.objects.create(user=user,article_id=article_id,is_up=is_up)
+  File "C:\Python36\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python36\lib\site-packages\django\db\models\query.py", line 394, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Python36\lib\site-packages\django\db\models\base.py", line 808, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Python36\lib\site-packages\django\db\models\base.py", line 838, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "C:\Python36\lib\site-packages\django\db\models\base.py", line 924, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Python36\lib\site-packages\django\db\models\base.py", line 963, in _do_insert
+    using=using, raw=raw)
+  File "C:\Python36\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python36\lib\site-packages\django\db\models\query.py", line 1076, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Python36\lib\site-packages\django\db\models\sql\compiler.py", line 1106, in execute_sql
+    for sql, params in self.as_sql():
+  File "C:\Python36\lib\site-packages\django\db\models\sql\compiler.py", line 1059, in as_sql
+    for obj in self.query.objs
+  File "C:\Python36\lib\site-packages\django\db\models\sql\compiler.py", line 1059, in <listcomp>
+    for obj in self.query.objs
+  File "C:\Python36\lib\site-packages\django\db\models\sql\compiler.py", line 1058, in <listcomp>
+    [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+  File "C:\Python36\lib\site-packages\django\db\models\sql\compiler.py", line 998, in prepare_value
+    value = field.get_db_prep_save(value, connection=self.connection)
+  File "C:\Python36\lib\site-packages\django\db\models\fields\related.py", line 963, in get_db_prep_save
+    return self.target_field.get_db_prep_save(value, connection=connection)
+  File "C:\Python36\lib\site-packages\django\db\models\fields\__init__.py", line 770, in get_db_prep_save
+    prepared=False)
+  File "C:\Python36\lib\site-packages\django\db\models\fields\__init__.py", line 958, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "C:\Python36\lib\site-packages\django\db\models\fields\__init__.py", line 966, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: '{{ article.pk }}'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python10\day78\bbs\blog\views.py", line 357, in up_down
+    response["fisrt_action"]=models.ArticleUpDown.objects.filter(user=user,article_id=article_id).first().is_up
+  File "C:\Python36\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python36\lib\site-packages\django\db\models\query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Python36\lib\site-packages\django\db\models\query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Python36\lib\site-packages\django\db\models\sql\query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Python36\lib\site-packages\django\db\models\sql\query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "C:\Python36\lib\site-packages\django\db\models\sql\query.py", line 1206, in build_filter
+    condition = lookup_class(lhs, value)
+  File "C:\Python36\lib\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Python36\lib\site-packages\django\db\models\fields\related_lookups.py", line 112, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "C:\Python36\lib\site-packages\django\db\models\fields\__init__.py", line 966, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: '{{ article.pk }}'
+[2018-05-29 08:55:30,735][Thread-25:4484][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /blog/up_down/]
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python10\day78\bbs\blog\views.py", line 347, in up_down
+    is_up=json.loads(request.POST.get('is_up'))
+  File "C:\Python36\lib\json\__init__.py", line 348, in loads
+    'not {!r}'.format(s.__class__.__name__))
+TypeError: the JSON object must be str, bytes or bytearray, not 'NoneType'
+[2018-05-29 08:58:31,421][Thread-43:6968][task_id:requests.packages.urllib3.connectionpool][connectionpool.py:214][INFO][Starting new HTTP connection (1): api.geetest.com]
+[2018-05-29 08:58:34,173][Thread-46:6168][task_id:requests.packages.urllib3.connectionpool][connectionpool.py:214][INFO][Starting new HTTP connection (1): api.geetest.com]
+[2018-05-29 09:04:03,453][Thread-88:2884][task_id:requests.packages.urllib3.connectionpool][connectionpool.py:214][INFO][Starting new HTTP connection (1): api.geetest.com]
+[2018-05-29 09:04:20,772][Thread-90:1648][task_id:requests.packages.urllib3.connectionpool][connectionpool.py:214][INFO][Starting new HTTP connection (1): api.geetest.com]
+[2018-05-29 09:04:38,775][Thread-91:6972][task_id:requests.packages.urllib3.connectionpool][connectionpool.py:214][INFO][Starting new HTTP connection (1): api.geetest.com]
+[2018-05-29 09:12:48,949][Thread-7:1568][task_id:django.security.csrf][csrf.py:160][WARNING][Forbidden (CSRF token missing or incorrect.): /blog/comment/]
+[2018-05-29 10:20:23,240][Thread-61:6536][task_id:requests.packages.urllib3.connectionpool][connectionpool.py:214][INFO][Starting new HTTP connection (1): api.geetest.com]
+[2018-05-29 10:20:36,804][Thread-63:5328][task_id:requests.packages.urllib3.connectionpool][connectionpool.py:214][INFO][Starting new HTTP connection (1): api.geetest.com]
+[2018-05-29 10:21:36,228][Thread-94:5800][task_id:requests.packages.urllib3.connectionpool][connectionpool.py:214][INFO][Starting new HTTP connection (1): api.geetest.com]
+[2018-05-29 10:21:45,728][Thread-95:5328][task_id:requests.packages.urllib3.connectionpool][connectionpool.py:214][INFO][Starting new HTTP connection (1): api.geetest.com]
+[2018-05-29 10:33:24,161][Thread-166:7024][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /blog/comment/]
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python10\day78\bbs\blog\views.py", line 394, in comment
+    response["create_time"]=comment_obj.create_time
+UnboundLocalError: local variable 'comment_obj' referenced before assignment
+[2018-05-29 10:33:25,360][Thread-167:5708][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /blog/comment/]
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python10\day78\bbs\blog\views.py", line 394, in comment
+    response["create_time"]=comment_obj.create_time
+UnboundLocalError: local variable 'comment_obj' referenced before assignment
+[2018-05-29 10:33:40,798][Thread-172:1684][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /blog/comment/]
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\db\backends\utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python36\lib\site-packages\django\db\backends\mysql\base.py", line 101, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Python36\lib\site-packages\pymysql\cursors.py", line 165, in execute
+    result = self._query(query)
+  File "C:\Python36\lib\site-packages\pymysql\cursors.py", line 321, in _query
+    conn.query(q)
+  File "C:\Python36\lib\site-packages\pymysql\connections.py", line 860, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Python36\lib\site-packages\pymysql\connections.py", line 1061, in _read_query_result
+    result.read()
+  File "C:\Python36\lib\site-packages\pymysql\connections.py", line 1349, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Python36\lib\site-packages\pymysql\connections.py", line 1018, in _read_packet
+    packet.check_error()
+  File "C:\Python36\lib\site-packages\pymysql\connections.py", line 384, in check_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Python36\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1048, "Column 'article_id' cannot be null")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python10\day78\bbs\blog\views.py", line 391, in comment
+    comment_obj=models.Comment.objects.create(article_id=article_id,user_id=user_pk,content=content)
+  File "C:\Python36\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python36\lib\site-packages\django\db\models\query.py", line 394, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Python36\lib\site-packages\django\db\models\base.py", line 808, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Python36\lib\site-packages\django\db\models\base.py", line 838, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "C:\Python36\lib\site-packages\django\db\models\base.py", line 924, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Python36\lib\site-packages\django\db\models\base.py", line 963, in _do_insert
+    using=using, raw=raw)
+  File "C:\Python36\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python36\lib\site-packages\django\db\models\query.py", line 1076, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Python36\lib\site-packages\django\db\models\sql\compiler.py", line 1107, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python36\lib\site-packages\django\db\backends\utils.py", line 80, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "C:\Python36\lib\site-packages\django\db\backends\utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python36\lib\site-packages\django\db\utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Python36\lib\site-packages\django\utils\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Python36\lib\site-packages\django\db\backends\utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python36\lib\site-packages\django\db\backends\mysql\base.py", line 101, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Python36\lib\site-packages\pymysql\cursors.py", line 165, in execute
+    result = self._query(query)
+  File "C:\Python36\lib\site-packages\pymysql\cursors.py", line 321, in _query
+    conn.query(q)
+  File "C:\Python36\lib\site-packages\pymysql\connections.py", line 860, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Python36\lib\site-packages\pymysql\connections.py", line 1061, in _read_query_result
+    result.read()
+  File "C:\Python36\lib\site-packages\pymysql\connections.py", line 1349, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Python36\lib\site-packages\pymysql\connections.py", line 1018, in _read_packet
+    packet.check_error()
+  File "C:\Python36\lib\site-packages\pymysql\connections.py", line 384, in check_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Python36\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.IntegrityError: (1048, "Column 'article_id' cannot be null")
+[2018-05-29 10:35:59,178][Thread-203:4820][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /blog/comment/]
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python10\day78\bbs\blog\views.py", line 394, in comment
+    response["create_time"]=comment_obj.create_time
+UnboundLocalError: local variable 'comment_obj' referenced before assignment
+[2018-05-29 10:41:31,647][Thread-26:2916][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /blog/comment/]
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python10\day78\bbs\blog\views.py", line 394, in comment
+    response["create_time"]=comment_obj.create_time.strftime("%Y-%m-%d")
+UnboundLocalError: local variable 'comment_obj' referenced before assignment
+[2018-05-29 11:31:08,523][Thread-15:4084][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /blog/comment_tree/3]
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python10\day78\bbs\blog\views.py", line 410, in comment_tree
+    return JsonResponse("")
+TypeError: __init__() missing 1 required positional argument: 'data'
+[2018-05-29 11:31:25,942][Thread-14:6496][task_id:blog.views][views.py:249][WARNING][又有人访问不存在页面了...]
+[2018-05-29 11:32:05,213][Thread-26:5124][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /blog/comment_tree/3/]
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python10\day78\bbs\blog\views.py", line 410, in comment_tree
+    return JsonResponse("")
+  File "C:\Python36\lib\site-packages\django\http\response.py", line 524, in __init__
+    'In order to allow non-dict objects to be serialized set the '
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+[2018-05-30 08:33:45,396][Thread-6:2176][task_id:django.request][base.py:152][WARNING][Not Found: /favicon.ico]
+[2018-05-30 09:10:12,445][Thread-3:6540][task_id:django.security.csrf][csrf.py:160][WARNING][Forbidden (CSRF token missing or incorrect.): /upload/]
+[2018-05-30 10:28:13,462][Thread-18:6524][task_id:blog.views][views.py:249][WARNING][又有人访问不存在页面了...]
+[2018-05-30 12:15:02,440][Thread-16:1300][task_id:django.request][base.py:152][WARNING][Not Found: /query]
+[2018-05-30 12:15:02,660][Thread-17:5332][task_id:django.request][base.py:152][WARNING][Not Found: /favicon.ico]
+[2019-04-13 15:58:21,893][Thread-11:6152][task_id:django.request][base.py:152][WARNING][Not Found: /media/avatars/1.jpg]
+[2019-04-13 15:58:21,927][Thread-13:20508][task_id:django.request][base.py:152][WARNING][Not Found: /media/avatars/1.jpg]
+[2019-04-13 15:58:22,378][Thread-20:2452][task_id:django.request][base.py:152][WARNING][Not Found: /media/avatars/1.jpg]
+[2019-04-13 15:58:23,365][Thread-27:8972][task_id:django.request][base.py:152][WARNING][Not Found: /favicon.ico]
+[2019-04-13 15:58:53,556][Thread-31:6280][task_id:django.request][base.py:152][WARNING][Not Found: /favicon.ico]
+[2019-04-13 15:58:56,917][Thread-34:15316][task_id:django.request][base.py:152][WARNING][Not Found: /media/avatars/1.jpg]
+[2019-04-16 19:37:44,251][Thread-17:2464][task_id:django.request][base.py:152][WARNING][Not Found: /favicon.ico]
+[2019-04-18 12:41:22,118][Thread-9:3688][task_id:django.request][base.py:152][WARNING][Not Found: /favicon.ico]
+[2019-04-18 16:29:26,649][Thread-3:12328][task_id:django.request][base.py:152][WARNING][Not Found: /favicon.ico]
+[2019-04-18 18:51:14,810][Thread-6:22412][task_id:django.request][base.py:152][WARNING][Not Found: /add_ariclt]
+[2019-04-18 18:51:19,924][Thread-7:15604][task_id:django.request][base.py:152][WARNING][Not Found: /add_aricle]
+[2019-04-18 18:51:42,978][Thread-10:17404][task_id:django.request][base.py:152][WARNING][Not Found: /add_aricle]
+[2019-04-18 18:54:53,314][Thread-1:1256][task_id:django.request][base.py:152][WARNING][Not Found: /backend/add_article]
+[2019-04-18 18:55:04,979][Thread-8:18352][task_id:django.request][base.py:152][WARNING][Not Found: /backend/]
+[2019-04-18 19:14:56,967][Thread-15:17836][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /blog/comment/]
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\老男孩淘宝web\Python（第五部分）：博客项目（二）+Xadmin组件\day81\bbs\blog\views.py", line 380, in comment
+    models.Article.objects.filter(nid=article_id).comment_count += 1
+AttributeError: 'QuerySet' object has no attribute 'comment_count'
+[2019-04-18 19:15:01,992][Thread-16:9772][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /blog/comment/]
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\老男孩淘宝web\Python（第五部分）：博客项目（二）+Xadmin组件\day81\bbs\blog\views.py", line 380, in comment
+    models.Article.objects.filter(nid=article_id).comment_count += 1
+AttributeError: 'QuerySet' object has no attribute 'comment_count'
+[2019-04-18 19:15:40,589][Thread-23:5032][task_id:blog.views][views.py:249][WARNING][又有人访问不存在页面了...]
+[2019-04-19 15:18:47,865][Thread-36:1148][task_id:django.request][base.py:152][WARNING][Not Found: /favicon.ico]
+[2019-05-05 12:49:30,805][Thread-3:5592][task_id:django.request][base.py:152][WARNING][Not Found: /favicon.ico]
+[2019-05-05 13:52:31,362][Thread-12:20292][task_id:django.request][base.py:152][WARNING][Not Found: /favicon.ico]
+[2019-05-05 13:52:35,315][Thread-13:18244][task_id:django.request][base.py:152][WARNING][Not Found: /favicon.ico]
+[2019-05-05 14:38:46,611][Thread-11:19416][task_id:blog.views][views.py:250][WARNING][又有人访问不存在页面了...]
+[2019-05-05 14:38:49,559][Thread-12:20632][task_id:blog.views][views.py:250][WARNING][又有人访问不存在页面了...]
+[2019-05-05 14:43:50,667][Thread-26:11832][task_id:blog.views][views.py:250][WARNING][又有人访问不存在页面了...]
+[2019-05-05 14:47:30,616][Thread-9:8708][task_id:django.request][base.py:152][WARNING][Not Found: /blog/]
+[2019-05-05 15:13:39,271][Thread-26:20984][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /login/]
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\老男孩淘宝web\Python（第五部分）：博客项目（二）+Xadmin组件\day81\bbs新增\blog\views.py", line 67, in login
+    status = request.session[gt.GT_STATUS_SESSION_KEY]
+  File "D:\python\lib\site-packages\django\contrib\sessions\backends\base.py", line 57, in __getitem__
+    return self._session[key]
+KeyError: 'gt_server_status'
+[2019-05-05 15:14:07,231][Thread-27:19124][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /login/]
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\老男孩淘宝web\Python（第五部分）：博客项目（二）+Xadmin组件\day81\bbs新增\blog\views.py", line 67, in login
+    status = request.session[gt.GT_STATUS_SESSION_KEY]
+  File "D:\python\lib\site-packages\django\contrib\sessions\backends\base.py", line 57, in __getitem__
+    return self._session[key]
+KeyError: 'gt_server_status'
+[2019-05-05 19:45:33,658][Thread-6:17980][task_id:django.request][base.py:152][WARNING][Not Found: /favicon.ico]
+[2019-05-05 20:23:36,571][Thread-5:13724][task_id:django.request][base.py:152][WARNING][Not Found: /blog/]
+[2019-05-05 20:28:42,215][Thread-9:20652][task_id:blog.views][views.py:250][WARNING][又有人访问不存在页面了...]
+[2019-05-05 21:56:12,598][Thread-6:9796][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /blog/guan_zhu/]
+Traceback (most recent call last):
+  File "F:\老男孩淘宝web\Python（第五部分）：博客项目（二）+Xadmin组件\day81\bbs新增\blog\views.py", line 486, in guan_zhu
+    models.GuanZhu.objects.create(user=user.pk,bu=obj)
+  File "D:\python\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\python\lib\site-packages\django\db\models\query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "D:\python\lib\site-packages\django\db\models\base.py", line 555, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "D:\python\lib\site-packages\django\db\models\fields\related_descriptors.py", line 216, in __set__
+    self.field.remote_field.model._meta.object_name,
+ValueError: Cannot assign "3": "GuanZhu.user" must be a "Article" instance.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\backends\mysql\base.py", line 101, in execute
+    return self.cursor.execute(query, args)
+  File "D:\python\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "D:\python\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 893, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1103, in _read_query_result
+    result.read()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1396, in read
+    first_packet = self.connection._read_packet()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1059, in _read_packet
+    packet.check_error()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 384, in check_error
+    err.raise_mysql_exception(self._data)
+  File "D:\python\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.ProgrammingError: (1146, "Table 'blogq.blog_guanzhu' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\老男孩淘宝web\Python（第五部分）：博客项目（二）+Xadmin组件\day81\bbs新增\blog\views.py", line 490, in guan_zhu
+    models.GuanZhu.objects.get(user=user.pk,bu=obj).delete()
+  File "D:\python\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\python\lib\site-packages\django\db\models\query.py", line 374, in get
+    num = len(clone)
+  File "D:\python\lib\site-packages\django\db\models\query.py", line 232, in __len__
+    self._fetch_all()
+  File "D:\python\lib\site-packages\django\db\models\query.py", line 1118, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "D:\python\lib\site-packages\django\db\models\query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch)
+  File "D:\python\lib\site-packages\django\db\models\sql\compiler.py", line 899, in execute_sql
+    raise original_exception
+  File "D:\python\lib\site-packages\django\db\models\sql\compiler.py", line 889, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "D:\python\lib\site-packages\django\utils\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "D:\python\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\backends\mysql\base.py", line 101, in execute
+    return self.cursor.execute(query, args)
+  File "D:\python\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "D:\python\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 893, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1103, in _read_query_result
+    result.read()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1396, in read
+    first_packet = self.connection._read_packet()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1059, in _read_packet
+    packet.check_error()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 384, in check_error
+    err.raise_mysql_exception(self._data)
+  File "D:\python\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.ProgrammingError: (1146, "Table 'blogq.blog_guanzhu' doesn't exist")
+[2019-05-05 21:59:17,783][Thread-6:14568][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /blog/guan_zhu/]
+Traceback (most recent call last):
+  File "F:\老男孩淘宝web\Python（第五部分）：博客项目（二）+Xadmin组件\day81\bbs新增\blog\views.py", line 486, in guan_zhu
+    models.GuanZhu.objects.create(user=user.pk,bu=obj)
+  File "D:\python\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\python\lib\site-packages\django\db\models\query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "D:\python\lib\site-packages\django\db\models\base.py", line 555, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "D:\python\lib\site-packages\django\db\models\fields\related_descriptors.py", line 216, in __set__
+    self.field.remote_field.model._meta.object_name,
+ValueError: Cannot assign "3": "GuanZhu.user" must be a "Article" instance.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\backends\mysql\base.py", line 101, in execute
+    return self.cursor.execute(query, args)
+  File "D:\python\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "D:\python\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 893, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1103, in _read_query_result
+    result.read()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1396, in read
+    first_packet = self.connection._read_packet()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1059, in _read_packet
+    packet.check_error()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 384, in check_error
+    err.raise_mysql_exception(self._data)
+  File "D:\python\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.ProgrammingError: (1146, "Table 'blogq.blog_guanzhu' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\老男孩淘宝web\Python（第五部分）：博客项目（二）+Xadmin组件\day81\bbs新增\blog\views.py", line 490, in guan_zhu
+    models.GuanZhu.objects.get(user=user.pk,bu=obj).delete()
+  File "D:\python\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\python\lib\site-packages\django\db\models\query.py", line 374, in get
+    num = len(clone)
+  File "D:\python\lib\site-packages\django\db\models\query.py", line 232, in __len__
+    self._fetch_all()
+  File "D:\python\lib\site-packages\django\db\models\query.py", line 1118, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "D:\python\lib\site-packages\django\db\models\query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch)
+  File "D:\python\lib\site-packages\django\db\models\sql\compiler.py", line 899, in execute_sql
+    raise original_exception
+  File "D:\python\lib\site-packages\django\db\models\sql\compiler.py", line 889, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "D:\python\lib\site-packages\django\utils\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "D:\python\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\backends\mysql\base.py", line 101, in execute
+    return self.cursor.execute(query, args)
+  File "D:\python\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "D:\python\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 893, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1103, in _read_query_result
+    result.read()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1396, in read
+    first_packet = self.connection._read_packet()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1059, in _read_packet
+    packet.check_error()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 384, in check_error
+    err.raise_mysql_exception(self._data)
+  File "D:\python\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.ProgrammingError: (1146, "Table 'blogq.blog_guanzhu' doesn't exist")
+[2019-05-05 22:05:36,284][Thread-8:10432][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /blog/guan_zhu/]
+Traceback (most recent call last):
+  File "F:\老男孩淘宝web\Python（第五部分）：博客项目（二）+Xadmin组件\day81\bbs新增\blog\views.py", line 486, in guan_zhu
+    models.GuanZhu.objects.create(user=user.pk,bu=obj)
+  File "D:\python\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\python\lib\site-packages\django\db\models\query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "D:\python\lib\site-packages\django\db\models\base.py", line 555, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "D:\python\lib\site-packages\django\db\models\fields\related_descriptors.py", line 216, in __set__
+    self.field.remote_field.model._meta.object_name,
+ValueError: Cannot assign "3": "GuanZhu.user" must be a "Article" instance.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\老男孩淘宝web\Python（第五部分）：博客项目（二）+Xadmin组件\day81\bbs新增\blog\views.py", line 491, in guan_zhu
+    models.GuanZhu.objects.get(user=user.pk,bu=obj).first().delete()
+  File "D:\python\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\python\lib\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+blog.models.DoesNotExist: GuanZhu matching query does not exist.
+[2019-05-06 13:00:17,380][Thread-12:15676][task_id:django.request][base.py:152][WARNING][Not Found: /favicon.ico]
+[2019-05-17 23:48:32,809][Thread-20:22556][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /blog/guan_zhu/]
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\backends\mysql\base.py", line 101, in execute
+    return self.cursor.execute(query, args)
+  File "D:\python\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "D:\python\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 893, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1103, in _read_query_result
+    result.read()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1396, in read
+    first_packet = self.connection._read_packet()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1059, in _read_packet
+    packet.check_error()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 384, in check_error
+    err.raise_mysql_exception(self._data)
+  File "D:\python\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1452, 'Cannot add or update a child row: a foreign key constraint fails (`blogq`.`blog_guanzhu`, CONSTRAINT `blog_guanzhu_user_id_7d8d2158_fk_blog_article_nid` FOREIGN KEY (`user_id`) REFERENCES `blog_article` (`nid`))')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "F:\老男孩淘宝web\Python（第五部分）：博客项目（二）+Xadmin组件\day81\bbs新增\blog\views.py", line 489, in guan_zhu
+    models.GuanZhu.objects.create(user_id=user.pk,bu_id=obj)
+  File "D:\python\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\python\lib\site-packages\django\db\models\query.py", line 394, in create
+    obj.save(force_insert=True, using=self.db)
+  File "D:\python\lib\site-packages\django\db\models\base.py", line 808, in save
+    force_update=force_update, update_fields=update_fields)
+  File "D:\python\lib\site-packages\django\db\models\base.py", line 838, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "D:\python\lib\site-packages\django\db\models\base.py", line 924, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "D:\python\lib\site-packages\django\db\models\base.py", line 963, in _do_insert
+    using=using, raw=raw)
+  File "D:\python\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\python\lib\site-packages\django\db\models\query.py", line 1076, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "D:\python\lib\site-packages\django\db\models\sql\compiler.py", line 1112, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "D:\python\lib\site-packages\django\utils\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "D:\python\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\backends\mysql\base.py", line 101, in execute
+    return self.cursor.execute(query, args)
+  File "D:\python\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "D:\python\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 893, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1103, in _read_query_result
+    result.read()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1396, in read
+    first_packet = self.connection._read_packet()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1059, in _read_packet
+    packet.check_error()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 384, in check_error
+    err.raise_mysql_exception(self._data)
+  File "D:\python\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.IntegrityError: (1452, 'Cannot add or update a child row: a foreign key constraint fails (`blogq`.`blog_guanzhu`, CONSTRAINT `blog_guanzhu_user_id_7d8d2158_fk_blog_article_nid` FOREIGN KEY (`user_id`) REFERENCES `blog_article` (`nid`))')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\老男孩淘宝web\Python（第五部分）：博客项目（二）+Xadmin组件\day81\bbs新增\blog\views.py", line 494, in guan_zhu
+    models.GuanZhu.objects.get(user_id=user.pk,bu_id=obj).delete()
+  File "D:\python\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\python\lib\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+blog.models.DoesNotExist: GuanZhu matching query does not exist.
+[2019-05-17 23:48:33,934][Thread-21:10800][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /blog/guan_zhu/]
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\backends\mysql\base.py", line 101, in execute
+    return self.cursor.execute(query, args)
+  File "D:\python\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "D:\python\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 893, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1103, in _read_query_result
+    result.read()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1396, in read
+    first_packet = self.connection._read_packet()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1059, in _read_packet
+    packet.check_error()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 384, in check_error
+    err.raise_mysql_exception(self._data)
+  File "D:\python\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1452, 'Cannot add or update a child row: a foreign key constraint fails (`blogq`.`blog_guanzhu`, CONSTRAINT `blog_guanzhu_user_id_7d8d2158_fk_blog_article_nid` FOREIGN KEY (`user_id`) REFERENCES `blog_article` (`nid`))')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "F:\老男孩淘宝web\Python（第五部分）：博客项目（二）+Xadmin组件\day81\bbs新增\blog\views.py", line 489, in guan_zhu
+    models.GuanZhu.objects.create(user_id=user.pk,bu_id=obj)
+  File "D:\python\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\python\lib\site-packages\django\db\models\query.py", line 394, in create
+    obj.save(force_insert=True, using=self.db)
+  File "D:\python\lib\site-packages\django\db\models\base.py", line 808, in save
+    force_update=force_update, update_fields=update_fields)
+  File "D:\python\lib\site-packages\django\db\models\base.py", line 838, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "D:\python\lib\site-packages\django\db\models\base.py", line 924, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "D:\python\lib\site-packages\django\db\models\base.py", line 963, in _do_insert
+    using=using, raw=raw)
+  File "D:\python\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\python\lib\site-packages\django\db\models\query.py", line 1076, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "D:\python\lib\site-packages\django\db\models\sql\compiler.py", line 1112, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "D:\python\lib\site-packages\django\utils\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "D:\python\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\backends\mysql\base.py", line 101, in execute
+    return self.cursor.execute(query, args)
+  File "D:\python\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "D:\python\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 893, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1103, in _read_query_result
+    result.read()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1396, in read
+    first_packet = self.connection._read_packet()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1059, in _read_packet
+    packet.check_error()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 384, in check_error
+    err.raise_mysql_exception(self._data)
+  File "D:\python\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.IntegrityError: (1452, 'Cannot add or update a child row: a foreign key constraint fails (`blogq`.`blog_guanzhu`, CONSTRAINT `blog_guanzhu_user_id_7d8d2158_fk_blog_article_nid` FOREIGN KEY (`user_id`) REFERENCES `blog_article` (`nid`))')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\老男孩淘宝web\Python（第五部分）：博客项目（二）+Xadmin组件\day81\bbs新增\blog\views.py", line 494, in guan_zhu
+    models.GuanZhu.objects.get(user_id=user.pk,bu_id=obj).delete()
+  File "D:\python\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\python\lib\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+blog.models.DoesNotExist: GuanZhu matching query does not exist.
+[2019-05-17 23:48:34,496][Thread-22:25588][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /blog/guan_zhu/]
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\backends\mysql\base.py", line 101, in execute
+    return self.cursor.execute(query, args)
+  File "D:\python\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "D:\python\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 893, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1103, in _read_query_result
+    result.read()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1396, in read
+    first_packet = self.connection._read_packet()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1059, in _read_packet
+    packet.check_error()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 384, in check_error
+    err.raise_mysql_exception(self._data)
+  File "D:\python\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1452, 'Cannot add or update a child row: a foreign key constraint fails (`blogq`.`blog_guanzhu`, CONSTRAINT `blog_guanzhu_user_id_7d8d2158_fk_blog_article_nid` FOREIGN KEY (`user_id`) REFERENCES `blog_article` (`nid`))')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "F:\老男孩淘宝web\Python（第五部分）：博客项目（二）+Xadmin组件\day81\bbs新增\blog\views.py", line 489, in guan_zhu
+    models.GuanZhu.objects.create(user_id=user.pk,bu_id=obj)
+  File "D:\python\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\python\lib\site-packages\django\db\models\query.py", line 394, in create
+    obj.save(force_insert=True, using=self.db)
+  File "D:\python\lib\site-packages\django\db\models\base.py", line 808, in save
+    force_update=force_update, update_fields=update_fields)
+  File "D:\python\lib\site-packages\django\db\models\base.py", line 838, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "D:\python\lib\site-packages\django\db\models\base.py", line 924, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "D:\python\lib\site-packages\django\db\models\base.py", line 963, in _do_insert
+    using=using, raw=raw)
+  File "D:\python\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\python\lib\site-packages\django\db\models\query.py", line 1076, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "D:\python\lib\site-packages\django\db\models\sql\compiler.py", line 1112, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "D:\python\lib\site-packages\django\utils\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "D:\python\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\backends\mysql\base.py", line 101, in execute
+    return self.cursor.execute(query, args)
+  File "D:\python\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "D:\python\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 893, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1103, in _read_query_result
+    result.read()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1396, in read
+    first_packet = self.connection._read_packet()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1059, in _read_packet
+    packet.check_error()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 384, in check_error
+    err.raise_mysql_exception(self._data)
+  File "D:\python\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.IntegrityError: (1452, 'Cannot add or update a child row: a foreign key constraint fails (`blogq`.`blog_guanzhu`, CONSTRAINT `blog_guanzhu_user_id_7d8d2158_fk_blog_article_nid` FOREIGN KEY (`user_id`) REFERENCES `blog_article` (`nid`))')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\老男孩淘宝web\Python（第五部分）：博客项目（二）+Xadmin组件\day81\bbs新增\blog\views.py", line 494, in guan_zhu
+    models.GuanZhu.objects.get(user_id=user.pk,bu_id=obj).delete()
+  File "D:\python\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\python\lib\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+blog.models.DoesNotExist: GuanZhu matching query does not exist.
+[2019-05-17 23:49:31,961][Thread-41:8804][task_id:django.request][base.py:152][WARNING][Not Found: /favicon.ico]
+[2019-05-17 23:49:42,282][Thread-46:1772][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /blog/guan_zhu/]
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\backends\mysql\base.py", line 101, in execute
+    return self.cursor.execute(query, args)
+  File "D:\python\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "D:\python\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 893, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1103, in _read_query_result
+    result.read()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1396, in read
+    first_packet = self.connection._read_packet()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1059, in _read_packet
+    packet.check_error()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 384, in check_error
+    err.raise_mysql_exception(self._data)
+  File "D:\python\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1452, 'Cannot add or update a child row: a foreign key constraint fails (`blogq`.`blog_guanzhu`, CONSTRAINT `blog_guanzhu_user_id_7d8d2158_fk_blog_article_nid` FOREIGN KEY (`user_id`) REFERENCES `blog_article` (`nid`))')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "F:\老男孩淘宝web\Python（第五部分）：博客项目（二）+Xadmin组件\day81\bbs新增\blog\views.py", line 489, in guan_zhu
+    models.GuanZhu.objects.create(user_id=user.pk,bu_id=obj)
+  File "D:\python\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\python\lib\site-packages\django\db\models\query.py", line 394, in create
+    obj.save(force_insert=True, using=self.db)
+  File "D:\python\lib\site-packages\django\db\models\base.py", line 808, in save
+    force_update=force_update, update_fields=update_fields)
+  File "D:\python\lib\site-packages\django\db\models\base.py", line 838, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "D:\python\lib\site-packages\django\db\models\base.py", line 924, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "D:\python\lib\site-packages\django\db\models\base.py", line 963, in _do_insert
+    using=using, raw=raw)
+  File "D:\python\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\python\lib\site-packages\django\db\models\query.py", line 1076, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "D:\python\lib\site-packages\django\db\models\sql\compiler.py", line 1112, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "D:\python\lib\site-packages\django\utils\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "D:\python\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\backends\mysql\base.py", line 101, in execute
+    return self.cursor.execute(query, args)
+  File "D:\python\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "D:\python\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 893, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1103, in _read_query_result
+    result.read()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1396, in read
+    first_packet = self.connection._read_packet()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1059, in _read_packet
+    packet.check_error()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 384, in check_error
+    err.raise_mysql_exception(self._data)
+  File "D:\python\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.IntegrityError: (1452, 'Cannot add or update a child row: a foreign key constraint fails (`blogq`.`blog_guanzhu`, CONSTRAINT `blog_guanzhu_user_id_7d8d2158_fk_blog_article_nid` FOREIGN KEY (`user_id`) REFERENCES `blog_article` (`nid`))')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\老男孩淘宝web\Python（第五部分）：博客项目（二）+Xadmin组件\day81\bbs新增\blog\views.py", line 494, in guan_zhu
+    models.GuanZhu.objects.get(user_id=user.pk,bu_id=obj).delete()
+  File "D:\python\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\python\lib\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+blog.models.DoesNotExist: GuanZhu matching query does not exist.
+[2019-05-17 23:49:42,590][Thread-47:8860][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /blog/guan_zhu/]
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\backends\mysql\base.py", line 101, in execute
+    return self.cursor.execute(query, args)
+  File "D:\python\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "D:\python\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 893, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1103, in _read_query_result
+    result.read()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1396, in read
+    first_packet = self.connection._read_packet()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1059, in _read_packet
+    packet.check_error()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 384, in check_error
+    err.raise_mysql_exception(self._data)
+  File "D:\python\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1452, 'Cannot add or update a child row: a foreign key constraint fails (`blogq`.`blog_guanzhu`, CONSTRAINT `blog_guanzhu_user_id_7d8d2158_fk_blog_article_nid` FOREIGN KEY (`user_id`) REFERENCES `blog_article` (`nid`))')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "F:\老男孩淘宝web\Python（第五部分）：博客项目（二）+Xadmin组件\day81\bbs新增\blog\views.py", line 489, in guan_zhu
+    models.GuanZhu.objects.create(user_id=user.pk,bu_id=obj)
+  File "D:\python\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\python\lib\site-packages\django\db\models\query.py", line 394, in create
+    obj.save(force_insert=True, using=self.db)
+  File "D:\python\lib\site-packages\django\db\models\base.py", line 808, in save
+    force_update=force_update, update_fields=update_fields)
+  File "D:\python\lib\site-packages\django\db\models\base.py", line 838, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "D:\python\lib\site-packages\django\db\models\base.py", line 924, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "D:\python\lib\site-packages\django\db\models\base.py", line 963, in _do_insert
+    using=using, raw=raw)
+  File "D:\python\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\python\lib\site-packages\django\db\models\query.py", line 1076, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "D:\python\lib\site-packages\django\db\models\sql\compiler.py", line 1112, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "D:\python\lib\site-packages\django\utils\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "D:\python\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\backends\mysql\base.py", line 101, in execute
+    return self.cursor.execute(query, args)
+  File "D:\python\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "D:\python\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 893, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1103, in _read_query_result
+    result.read()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1396, in read
+    first_packet = self.connection._read_packet()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1059, in _read_packet
+    packet.check_error()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 384, in check_error
+    err.raise_mysql_exception(self._data)
+  File "D:\python\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.IntegrityError: (1452, 'Cannot add or update a child row: a foreign key constraint fails (`blogq`.`blog_guanzhu`, CONSTRAINT `blog_guanzhu_user_id_7d8d2158_fk_blog_article_nid` FOREIGN KEY (`user_id`) REFERENCES `blog_article` (`nid`))')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\老男孩淘宝web\Python（第五部分）：博客项目（二）+Xadmin组件\day81\bbs新增\blog\views.py", line 494, in guan_zhu
+    models.GuanZhu.objects.get(user_id=user.pk,bu_id=obj).delete()
+  File "D:\python\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\python\lib\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+blog.models.DoesNotExist: GuanZhu matching query does not exist.
+[2019-05-17 23:49:42,749][Thread-48:1596][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /blog/guan_zhu/]
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\backends\mysql\base.py", line 101, in execute
+    return self.cursor.execute(query, args)
+  File "D:\python\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "D:\python\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 893, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1103, in _read_query_result
+    result.read()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1396, in read
+    first_packet = self.connection._read_packet()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1059, in _read_packet
+    packet.check_error()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 384, in check_error
+    err.raise_mysql_exception(self._data)
+  File "D:\python\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1452, 'Cannot add or update a child row: a foreign key constraint fails (`blogq`.`blog_guanzhu`, CONSTRAINT `blog_guanzhu_user_id_7d8d2158_fk_blog_article_nid` FOREIGN KEY (`user_id`) REFERENCES `blog_article` (`nid`))')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "F:\老男孩淘宝web\Python（第五部分）：博客项目（二）+Xadmin组件\day81\bbs新增\blog\views.py", line 489, in guan_zhu
+    models.GuanZhu.objects.create(user_id=user.pk,bu_id=obj)
+  File "D:\python\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\python\lib\site-packages\django\db\models\query.py", line 394, in create
+    obj.save(force_insert=True, using=self.db)
+  File "D:\python\lib\site-packages\django\db\models\base.py", line 808, in save
+    force_update=force_update, update_fields=update_fields)
+  File "D:\python\lib\site-packages\django\db\models\base.py", line 838, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "D:\python\lib\site-packages\django\db\models\base.py", line 924, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "D:\python\lib\site-packages\django\db\models\base.py", line 963, in _do_insert
+    using=using, raw=raw)
+  File "D:\python\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\python\lib\site-packages\django\db\models\query.py", line 1076, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "D:\python\lib\site-packages\django\db\models\sql\compiler.py", line 1112, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "D:\python\lib\site-packages\django\utils\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "D:\python\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\backends\mysql\base.py", line 101, in execute
+    return self.cursor.execute(query, args)
+  File "D:\python\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "D:\python\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 893, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1103, in _read_query_result
+    result.read()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1396, in read
+    first_packet = self.connection._read_packet()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1059, in _read_packet
+    packet.check_error()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 384, in check_error
+    err.raise_mysql_exception(self._data)
+  File "D:\python\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.IntegrityError: (1452, 'Cannot add or update a child row: a foreign key constraint fails (`blogq`.`blog_guanzhu`, CONSTRAINT `blog_guanzhu_user_id_7d8d2158_fk_blog_article_nid` FOREIGN KEY (`user_id`) REFERENCES `blog_article` (`nid`))')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\老男孩淘宝web\Python（第五部分）：博客项目（二）+Xadmin组件\day81\bbs新增\blog\views.py", line 494, in guan_zhu
+    models.GuanZhu.objects.get(user_id=user.pk,bu_id=obj).delete()
+  File "D:\python\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\python\lib\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+blog.models.DoesNotExist: GuanZhu matching query does not exist.
+[2019-05-17 23:49:48,409][Thread-51:15988][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /blog/guan_zhu/]
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\backends\mysql\base.py", line 101, in execute
+    return self.cursor.execute(query, args)
+  File "D:\python\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "D:\python\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 893, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1103, in _read_query_result
+    result.read()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1396, in read
+    first_packet = self.connection._read_packet()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1059, in _read_packet
+    packet.check_error()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 384, in check_error
+    err.raise_mysql_exception(self._data)
+  File "D:\python\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1452, 'Cannot add or update a child row: a foreign key constraint fails (`blogq`.`blog_guanzhu`, CONSTRAINT `blog_guanzhu_user_id_7d8d2158_fk_blog_article_nid` FOREIGN KEY (`user_id`) REFERENCES `blog_article` (`nid`))')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "F:\老男孩淘宝web\Python（第五部分）：博客项目（二）+Xadmin组件\day81\bbs新增\blog\views.py", line 489, in guan_zhu
+    models.GuanZhu.objects.create(user_id=user.pk,bu_id=obj)
+  File "D:\python\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\python\lib\site-packages\django\db\models\query.py", line 394, in create
+    obj.save(force_insert=True, using=self.db)
+  File "D:\python\lib\site-packages\django\db\models\base.py", line 808, in save
+    force_update=force_update, update_fields=update_fields)
+  File "D:\python\lib\site-packages\django\db\models\base.py", line 838, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "D:\python\lib\site-packages\django\db\models\base.py", line 924, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "D:\python\lib\site-packages\django\db\models\base.py", line 963, in _do_insert
+    using=using, raw=raw)
+  File "D:\python\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\python\lib\site-packages\django\db\models\query.py", line 1076, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "D:\python\lib\site-packages\django\db\models\sql\compiler.py", line 1112, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "D:\python\lib\site-packages\django\utils\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "D:\python\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\backends\mysql\base.py", line 101, in execute
+    return self.cursor.execute(query, args)
+  File "D:\python\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "D:\python\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 893, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1103, in _read_query_result
+    result.read()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1396, in read
+    first_packet = self.connection._read_packet()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1059, in _read_packet
+    packet.check_error()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 384, in check_error
+    err.raise_mysql_exception(self._data)
+  File "D:\python\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.IntegrityError: (1452, 'Cannot add or update a child row: a foreign key constraint fails (`blogq`.`blog_guanzhu`, CONSTRAINT `blog_guanzhu_user_id_7d8d2158_fk_blog_article_nid` FOREIGN KEY (`user_id`) REFERENCES `blog_article` (`nid`))')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\老男孩淘宝web\Python（第五部分）：博客项目（二）+Xadmin组件\day81\bbs新增\blog\views.py", line 494, in guan_zhu
+    models.GuanZhu.objects.get(user_id=user.pk,bu_id=obj).delete()
+  File "D:\python\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\python\lib\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+blog.models.DoesNotExist: GuanZhu matching query does not exist.
+[2019-05-17 23:49:49,536][Thread-52:5000][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /blog/guan_zhu/]
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\backends\mysql\base.py", line 101, in execute
+    return self.cursor.execute(query, args)
+  File "D:\python\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "D:\python\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 893, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1103, in _read_query_result
+    result.read()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1396, in read
+    first_packet = self.connection._read_packet()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1059, in _read_packet
+    packet.check_error()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 384, in check_error
+    err.raise_mysql_exception(self._data)
+  File "D:\python\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1452, 'Cannot add or update a child row: a foreign key constraint fails (`blogq`.`blog_guanzhu`, CONSTRAINT `blog_guanzhu_user_id_7d8d2158_fk_blog_article_nid` FOREIGN KEY (`user_id`) REFERENCES `blog_article` (`nid`))')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "F:\老男孩淘宝web\Python（第五部分）：博客项目（二）+Xadmin组件\day81\bbs新增\blog\views.py", line 489, in guan_zhu
+    models.GuanZhu.objects.create(user_id=user.pk,bu_id=obj)
+  File "D:\python\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\python\lib\site-packages\django\db\models\query.py", line 394, in create
+    obj.save(force_insert=True, using=self.db)
+  File "D:\python\lib\site-packages\django\db\models\base.py", line 808, in save
+    force_update=force_update, update_fields=update_fields)
+  File "D:\python\lib\site-packages\django\db\models\base.py", line 838, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "D:\python\lib\site-packages\django\db\models\base.py", line 924, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "D:\python\lib\site-packages\django\db\models\base.py", line 963, in _do_insert
+    using=using, raw=raw)
+  File "D:\python\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\python\lib\site-packages\django\db\models\query.py", line 1076, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "D:\python\lib\site-packages\django\db\models\sql\compiler.py", line 1112, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "D:\python\lib\site-packages\django\utils\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "D:\python\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\backends\mysql\base.py", line 101, in execute
+    return self.cursor.execute(query, args)
+  File "D:\python\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "D:\python\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 893, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1103, in _read_query_result
+    result.read()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1396, in read
+    first_packet = self.connection._read_packet()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1059, in _read_packet
+    packet.check_error()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 384, in check_error
+    err.raise_mysql_exception(self._data)
+  File "D:\python\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.IntegrityError: (1452, 'Cannot add or update a child row: a foreign key constraint fails (`blogq`.`blog_guanzhu`, CONSTRAINT `blog_guanzhu_user_id_7d8d2158_fk_blog_article_nid` FOREIGN KEY (`user_id`) REFERENCES `blog_article` (`nid`))')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\老男孩淘宝web\Python（第五部分）：博客项目（二）+Xadmin组件\day81\bbs新增\blog\views.py", line 494, in guan_zhu
+    models.GuanZhu.objects.get(user_id=user.pk,bu_id=obj).delete()
+  File "D:\python\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\python\lib\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+blog.models.DoesNotExist: GuanZhu matching query does not exist.
+[2019-05-17 23:49:56,675][Thread-55:12232][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /blog/guan_zhu/]
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\backends\mysql\base.py", line 101, in execute
+    return self.cursor.execute(query, args)
+  File "D:\python\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "D:\python\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 893, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1103, in _read_query_result
+    result.read()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1396, in read
+    first_packet = self.connection._read_packet()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1059, in _read_packet
+    packet.check_error()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 384, in check_error
+    err.raise_mysql_exception(self._data)
+  File "D:\python\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1452, 'Cannot add or update a child row: a foreign key constraint fails (`blogq`.`blog_guanzhu`, CONSTRAINT `blog_guanzhu_user_id_7d8d2158_fk_blog_article_nid` FOREIGN KEY (`user_id`) REFERENCES `blog_article` (`nid`))')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "F:\老男孩淘宝web\Python（第五部分）：博客项目（二）+Xadmin组件\day81\bbs新增\blog\views.py", line 489, in guan_zhu
+    models.GuanZhu.objects.create(user_id=user.pk,bu_id=obj)
+  File "D:\python\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\python\lib\site-packages\django\db\models\query.py", line 394, in create
+    obj.save(force_insert=True, using=self.db)
+  File "D:\python\lib\site-packages\django\db\models\base.py", line 808, in save
+    force_update=force_update, update_fields=update_fields)
+  File "D:\python\lib\site-packages\django\db\models\base.py", line 838, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "D:\python\lib\site-packages\django\db\models\base.py", line 924, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "D:\python\lib\site-packages\django\db\models\base.py", line 963, in _do_insert
+    using=using, raw=raw)
+  File "D:\python\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\python\lib\site-packages\django\db\models\query.py", line 1076, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "D:\python\lib\site-packages\django\db\models\sql\compiler.py", line 1112, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "D:\python\lib\site-packages\django\utils\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "D:\python\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\backends\mysql\base.py", line 101, in execute
+    return self.cursor.execute(query, args)
+  File "D:\python\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "D:\python\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 893, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1103, in _read_query_result
+    result.read()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1396, in read
+    first_packet = self.connection._read_packet()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1059, in _read_packet
+    packet.check_error()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 384, in check_error
+    err.raise_mysql_exception(self._data)
+  File "D:\python\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.IntegrityError: (1452, 'Cannot add or update a child row: a foreign key constraint fails (`blogq`.`blog_guanzhu`, CONSTRAINT `blog_guanzhu_user_id_7d8d2158_fk_blog_article_nid` FOREIGN KEY (`user_id`) REFERENCES `blog_article` (`nid`))')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\老男孩淘宝web\Python（第五部分）：博客项目（二）+Xadmin组件\day81\bbs新增\blog\views.py", line 494, in guan_zhu
+    models.GuanZhu.objects.get(user_id=user.pk,bu_id=obj).delete()
+  File "D:\python\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\python\lib\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+blog.models.DoesNotExist: GuanZhu matching query does not exist.
+[2019-05-17 23:50:07,528][Thread-58:27100][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /blog/guan_zhu/]
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\backends\mysql\base.py", line 101, in execute
+    return self.cursor.execute(query, args)
+  File "D:\python\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "D:\python\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 893, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1103, in _read_query_result
+    result.read()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1396, in read
+    first_packet = self.connection._read_packet()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1059, in _read_packet
+    packet.check_error()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 384, in check_error
+    err.raise_mysql_exception(self._data)
+  File "D:\python\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1452, 'Cannot add or update a child row: a foreign key constraint fails (`blogq`.`blog_guanzhu`, CONSTRAINT `blog_guanzhu_user_id_7d8d2158_fk_blog_article_nid` FOREIGN KEY (`user_id`) REFERENCES `blog_article` (`nid`))')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "F:\老男孩淘宝web\Python（第五部分）：博客项目（二）+Xadmin组件\day81\bbs新增\blog\views.py", line 489, in guan_zhu
+    models.GuanZhu.objects.create(user_id=user.pk,bu_id=obj)
+  File "D:\python\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\python\lib\site-packages\django\db\models\query.py", line 394, in create
+    obj.save(force_insert=True, using=self.db)
+  File "D:\python\lib\site-packages\django\db\models\base.py", line 808, in save
+    force_update=force_update, update_fields=update_fields)
+  File "D:\python\lib\site-packages\django\db\models\base.py", line 838, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "D:\python\lib\site-packages\django\db\models\base.py", line 924, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "D:\python\lib\site-packages\django\db\models\base.py", line 963, in _do_insert
+    using=using, raw=raw)
+  File "D:\python\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\python\lib\site-packages\django\db\models\query.py", line 1076, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "D:\python\lib\site-packages\django\db\models\sql\compiler.py", line 1112, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "D:\python\lib\site-packages\django\utils\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "D:\python\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\backends\mysql\base.py", line 101, in execute
+    return self.cursor.execute(query, args)
+  File "D:\python\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "D:\python\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 893, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1103, in _read_query_result
+    result.read()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1396, in read
+    first_packet = self.connection._read_packet()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1059, in _read_packet
+    packet.check_error()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 384, in check_error
+    err.raise_mysql_exception(self._data)
+  File "D:\python\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.IntegrityError: (1452, 'Cannot add or update a child row: a foreign key constraint fails (`blogq`.`blog_guanzhu`, CONSTRAINT `blog_guanzhu_user_id_7d8d2158_fk_blog_article_nid` FOREIGN KEY (`user_id`) REFERENCES `blog_article` (`nid`))')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\老男孩淘宝web\Python（第五部分）：博客项目（二）+Xadmin组件\day81\bbs新增\blog\views.py", line 494, in guan_zhu
+    models.GuanZhu.objects.get(user_id=user.pk,bu_id=obj).delete()
+  File "D:\python\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\python\lib\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+blog.models.DoesNotExist: GuanZhu matching query does not exist.
+[2019-05-20 21:33:51,614][Thread-8:11752][task_id:django.request][base.py:152][WARNING][Not Found: /favicon.ico]
+[2019-05-20 22:14:55,477][Thread-8:12140][task_id:django.security.csrf][csrf.py:160][WARNING][Forbidden (CSRF token missing or incorrect.): /reg/]
+[2019-05-20 22:23:39,532][Thread-8:11124][task_id:django.security.csrf][csrf.py:160][WARNING][Forbidden (CSRF token missing or incorrect.): /reg/]
+[2019-05-20 22:42:25,440][Thread-13:4760][task_id:django.request][base.py:152][WARNING][Not Found: /favicon.ico]
+[2019-05-20 22:56:54,851][Thread-8:8032][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /search/]
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python\lib\site-packages\haystack\views.py", line 51, in __call__
+    return self.create_response()
+  File "D:\python\lib\site-packages\haystack\views.py", line 152, in create_response
+    return render(self.request, self.template, context)
+  File "D:\python\lib\site-packages\django\shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\python\lib\site-packages\django\template\loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\python\lib\site-packages\django\template\loader.py", line 25, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: search/search.html
+[2019-05-21 11:14:31,212][Thread-6:11048][task_id:django.request][base.py:152][WARNING][Not Found: /favicon.ico]
+[2019-05-21 11:54:30,542][Thread-6:11608][task_id:django.request][base.py:152][WARNING][Not Found: /favicon.ico]
+[2019-05-21 12:10:45,080][Thread-15:6156][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /blog/guan_zhu/]
+Traceback (most recent call last):
+  File "C:\Users\luo  xian  bo\Desktop\bbs新增 副本\blog\views.py", line 494, in guan_zhu
+    models.GuanZhu.objects.create(user_id=user.pk,bu_id=obj)
+AttributeError: module 'blog.models' has no attribute 'GuanZhu'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\luo  xian  bo\Desktop\bbs新增 副本\blog\views.py", line 499, in guan_zhu
+    models.GuanZhu.objects.get(user_id=user.pk,bu_id=obj).delete()
+AttributeError: module 'blog.models' has no attribute 'GuanZhu'
+[2019-05-21 12:10:47,717][Thread-16:11712][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /blog/guan_zhu/]
+Traceback (most recent call last):
+  File "C:\Users\luo  xian  bo\Desktop\bbs新增 副本\blog\views.py", line 494, in guan_zhu
+    models.GuanZhu.objects.create(user_id=user.pk,bu_id=obj)
+AttributeError: module 'blog.models' has no attribute 'GuanZhu'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\luo  xian  bo\Desktop\bbs新增 副本\blog\views.py", line 499, in guan_zhu
+    models.GuanZhu.objects.get(user_id=user.pk,bu_id=obj).delete()
+AttributeError: module 'blog.models' has no attribute 'GuanZhu'
+[2019-05-21 12:11:03,670][Thread-20:5024][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /blog/guan_zhu/]
+Traceback (most recent call last):
+  File "C:\Users\luo  xian  bo\Desktop\bbs新增 副本\blog\views.py", line 494, in guan_zhu
+    models.GuanZhu.objects.create(user_id=user.pk,bu_id=obj)
+AttributeError: module 'blog.models' has no attribute 'GuanZhu'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\luo  xian  bo\Desktop\bbs新增 副本\blog\views.py", line 499, in guan_zhu
+    models.GuanZhu.objects.get(user_id=user.pk,bu_id=obj).delete()
+AttributeError: module 'blog.models' has no attribute 'GuanZhu'
+[2019-08-30 23:35:01,892][Thread-1:6708][task_id:django.request][base.py:152][WARNING][Not Found: /]
+[2019-08-30 23:35:16,641][Thread-5:10448][task_id:django.request][base.py:152][WARNING][Not Found: /register/]
+[2019-08-31 13:56:16,136][Thread-1:8588][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /]
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "A:\XM\blogtwo\article\views.py", line 8, in index
+    return render(request,'index.html')
+  File "D:\python\lib\site-packages\django\shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\python\lib\site-packages\django\template\loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\python\lib\site-packages\django\template\loader.py", line 25, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: index.html
+[2019-08-31 13:56:20,708][Thread-3:10172][task_id:django.request][base.py:152][WARNING][Not Found: /favicon.ico]
+[2019-08-31 13:57:41,379][Thread-7:10420][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 13:57:41,522][Thread-8:6888][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 13:57:41,706][Thread-9:10344][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 13:57:42,185][Thread-10:5688][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 13:57:42,282][Thread-11:11188][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 13:57:42,395][Thread-12:12800][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 13:57:42,697][Thread-13:5744][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 13:57:42,865][Thread-14:5708][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 13:57:43,009][Thread-15:13088][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 13:57:43,619][Thread-16:9328][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 13:57:43,699][Thread-17:9804][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 13:57:43,835][Thread-18:8392][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 13:57:44,986][Thread-19:5840][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 13:58:53,299][Thread-20:5252][task_id:django.request][base.py:152][WARNING][Not Found: /reg/]
+[2019-08-31 13:58:57,245][Thread-21:9352][task_id:django.request][base.py:152][WARNING][Not Found: /reg/]
+[2019-08-31 13:58:59,420][Thread-22:11884][task_id:django.request][base.py:152][WARNING][Not Found: /reg/]
+[2019-08-31 13:58:59,814][Thread-23:13300][task_id:django.request][base.py:152][WARNING][Not Found: /reg/]
+[2019-08-31 13:58:59,998][Thread-24:3412][task_id:django.request][base.py:152][WARNING][Not Found: /reg/]
+[2019-08-31 13:59:00,158][Thread-25:7872][task_id:django.request][base.py:152][WARNING][Not Found: /reg/]
+[2019-08-31 13:59:00,314][Thread-26:5928][task_id:django.request][base.py:152][WARNING][Not Found: /reg/]
+[2019-08-31 13:59:00,513][Thread-27:9872][task_id:django.request][base.py:152][WARNING][Not Found: /reg/]
+[2019-08-31 13:59:00,681][Thread-28:7640][task_id:django.request][base.py:152][WARNING][Not Found: /reg/]
+[2019-08-31 13:59:02,548][Thread-29:4324][task_id:django.request][base.py:152][WARNING][Not Found: /reg/]
+[2019-08-31 14:03:46,170][Thread-9:3016][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:03:46,352][Thread-10:8808][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:03:46,519][Thread-11:9448][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:03:47,435][Thread-12:10124][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:03:47,530][Thread-13:13240][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:03:47,657][Thread-14:12968][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:03:48,762][Thread-15:12980][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:04:16,143][Thread-16:11568][task_id:django.request][base.py:152][WARNING][Not Found: /register/]
+[2019-08-31 14:04:18,006][Thread-17:6656][task_id:django.request][base.py:152][WARNING][Not Found: /register/]
+[2019-08-31 14:04:18,700][Thread-18:13264][task_id:django.request][base.py:152][WARNING][Not Found: /register/]
+[2019-08-31 14:04:18,906][Thread-19:11240][task_id:django.request][base.py:152][WARNING][Not Found: /register/]
+[2019-08-31 14:04:19,067][Thread-20:12940][task_id:django.request][base.py:152][WARNING][Not Found: /register/]
+[2019-08-31 14:04:19,246][Thread-21:11612][task_id:django.request][base.py:152][WARNING][Not Found: /register/]
+[2019-08-31 14:04:19,520][Thread-22:11068][task_id:django.request][base.py:152][WARNING][Not Found: /register/]
+[2019-08-31 14:05:07,713][Thread-3:11488][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:05:07,895][Thread-4:8764][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:05:08,047][Thread-5:7520][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:05:09,121][Thread-6:9816][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:05:09,239][Thread-7:9520][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:05:09,370][Thread-8:13288][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:05:09,648][Thread-9:10156][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:05:09,832][Thread-10:8612][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:05:10,587][Thread-11:7352][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:05:10,970][Thread-12:7784][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:05:11,112][Thread-13:596][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:05:11,252][Thread-14:12784][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:05:11,553][Thread-15:8460][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:05:11,736][Thread-16:8744][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:05:11,865][Thread-17:10732][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:05:12,387][Thread-18:7964][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:05:12,559][Thread-19:8016][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:05:12,788][Thread-20:11468][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:05:12,811][Thread-21:10680][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:05:13,332][Thread-22:6192][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:05:13,522][Thread-23:8168][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:05:13,682][Thread-24:9820][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:05:13,903][Thread-25:3516][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:05:14,252][Thread-26:10276][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:05:14,349][Thread-27:9140][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:05:14,499][Thread-28:9280][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:05:15,565][Thread-29:8304][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:06:12,724][Thread-31:9356][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:07:40,802][Thread-4:4796][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:07:40,983][Thread-5:5628][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:07:41,127][Thread-6:8224][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:07:41,815][Thread-7:3360][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:07:41,958][Thread-8:11568][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:07:42,079][Thread-9:11612][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:07:43,463][Thread-10:9960][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:07:43,650][Thread-11:6368][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:07:43,800][Thread-12:7272][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:08:38,074][Thread-17:9012][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:09:48,979][Thread-3:8392][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:09:49,130][Thread-4:6476][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:09:49,302][Thread-5:7928][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:10:20,601][Thread-15:6984][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:10:20,783][Thread-16:10928][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:10:21,767][Thread-17:8824][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:13:12,059][Thread-3:7680][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:13:12,247][Thread-4:10320][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:13:12,390][Thread-5:12992][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:13:58,444][Thread-10:10960][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:13:58,609][Thread-11:11060][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:13:58,790][Thread-12:11688][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:13:59,054][Thread-13:9960][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:13:59,238][Thread-14:1252][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:13:59,447][Thread-15:6956][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:14:52,244][Thread-3:1640][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:14:52,409][Thread-4:1220][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:14:52,567][Thread-5:5980][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:14:52,810][Thread-6:12856][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:14:52,966][Thread-7:11188][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:14:53,169][Thread-8:8908][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:17:41,616][Thread-3:8416][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:17:41,783][Thread-4:7108][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:17:41,944][Thread-5:8956][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:19:16,818][Thread-3:10756][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:19:16,990][Thread-4:7944][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:19:17,165][Thread-5:3984][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:21:27,649][Thread-3:9656][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:21:27,814][Thread-4:12560][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:21:27,990][Thread-5:1720][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:22:17,628][Thread-10:3856][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:24:46,928][Thread-4:6284][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:24:47,118][Thread-5:9052][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:24:47,278][Thread-6:11476][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:26:21,713][Thread-3:5356][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:26:21,902][Thread-4:9548][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:26:22,045][Thread-5:10512][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:26:23,871][Thread-6:7196][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:26:24,614][Thread-7:11912][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:27:57,087][Thread-10:1464][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:27:57,624][Thread-11:12080][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:30:53,066][Thread-8:4544][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:30:53,214][Thread-9:8528][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:30:53,382][Thread-10:2668][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:30:53,397][Thread-11:2632][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:32:16,647][Thread-3:5044][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:32:16,855][Thread-4:9512][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:32:16,997][Thread-5:9612][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:35:03,162][Thread-6:2244][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:35:03,335][Thread-7:7500][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:35:03,509][Thread-8:8996][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:35:56,339][Thread-12:8212][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:38:09,758][Thread-5:6852][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:38:09,925][Thread-6:7644][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:38:10,077][Thread-7:5184][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:38:10,101][Thread-8:6052][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:38:31,600][Thread-9:9652][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /user/register/]
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "A:\XM\blogtwo\user\views.py", line 106, in register
+    return redirect(reverse("article:index"))    # reverse 里面的参数是namespace以及name的内容
+NameError: name 'reverse' is not defined
+[2019-08-31 14:41:02,066][Thread-4:13040][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:41:02,981][Thread-5:10424][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:41:03,173][Thread-6:7008][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:42:15,978][Thread-14:13176][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:42:16,160][Thread-15:10096][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:42:16,335][Thread-16:12236][task_id:django.request][base.py:152][WARNING][Not Found: /check_username_exist/]
+[2019-08-31 14:47:47,246][Thread-5:3496][task_id:django.request][base.py:152][WARNING][Not Found: /index/]
+[2019-08-31 14:49:05,401][Thread-11:10988][task_id:django.request][base.py:152][WARNING][Not Found: /index/]
+[2019-08-31 14:49:27,049][Thread-13:1428][task_id:django.request][base.py:152][WARNING][Not Found: /index/]
+[2019-08-31 14:50:38,855][Thread-8:2672][task_id:django.request][base.py:152][WARNING][Not Found: /index/]
+[2019-08-31 14:53:42,781][Thread-1:13252][task_id:django.request][base.py:152][WARNING][Not Found: /index/]
+[2019-08-31 14:53:57,794][Thread-7:3244][task_id:django.request][base.py:152][WARNING][Not Found: /index/]
+[2019-08-31 20:15:51,367][Thread-5:8536][task_id:django.request][base.py:152][WARNING][Not Found: /favicon.ico]
+[2019-08-31 21:30:09,646][Thread-8:14228][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /user/register/]
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "A:\XM\blogtwo\user\views.py", line 107, in register
+    return HttpResponseRedirect(reverse('article: index'))
+  File "D:\python\lib\site-packages\django\urls\base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "D:\python\lib\site-packages\django\urls\resolvers.py", line 497, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for ' index' not found. ' index' is not a valid view function or pattern name.
+[2019-08-31 22:05:04,790][Thread-3:8536][task_id:django.request][base.py:152][WARNING][Not Found: /favicon.ico]
+[2019-09-12 18:31:18,963][Thread-4:13652][task_id:django.request][base.py:152][WARNING][Not Found: /favicon.ico]
+[2019-09-12 19:49:58,392][Thread-13:7244][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /user/register/]
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\python\lib\site-packages\django\views\generic\base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "A:\XM\blogtwo\user\views.py", line 112, in post
+    print(user.id)
+AttributeError: 'str' object has no attribute 'id'
+[2019-09-12 19:51:11,839][Thread-25:13600][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /user/register/]
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\python\lib\site-packages\django\views\generic\base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "A:\XM\blogtwo\user\views.py", line 112, in post
+    print(user.id)
+AttributeError: 'str' object has no attribute 'id'
+[2019-09-12 19:53:44,883][Thread-3:10588][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /user/register/]
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\python\lib\site-packages\django\views\generic\base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "A:\XM\blogtwo\user\views.py", line 113, in post
+    print(user.id)
+AttributeError: 'QuerySet' object has no attribute 'id'
+[2019-09-12 19:54:15,305][Thread-5:9240][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /user/register/]
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\python\lib\site-packages\django\views\generic\base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "A:\XM\blogtwo\user\views.py", line 113, in post
+    print(user.id)
+AttributeError: 'User' object has no attribute 'id'
+[2019-09-12 19:55:18,636][Thread-8:7860][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /user/register/]
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\python\lib\site-packages\django\views\generic\base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "A:\XM\blogtwo\user\views.py", line 119, in post
+    info = {'confirm':user.id}
+AttributeError: 'User' object has no attribute 'id'
+[2019-09-12 20:57:04,768][Thread-20:4320][task_id:django.request][base.py:152][WARNING][Not Found: /pc-geetest/register]
+[2019-09-12 20:57:04,883][Thread-22:9600][task_id:django.request][base.py:152][WARNING][Not Found: /favicon.ico]
+[2019-09-12 23:56:40,375][Thread-1:9788][task_id:django.request][base.py:152][WARNING][Not Found: /]
+[2019-09-12 23:56:42,632][Thread-3:1020][task_id:django.request][base.py:152][WARNING][Not Found: /favicon.ico]
+[2019-09-13 12:14:34,987][Thread-7:12700][task_id:django.request][base.py:152][WARNING][Not Found: /]
+[2019-09-13 12:14:35,170][Thread-6:6836][task_id:django.request][base.py:152][WARNING][Not Found: /favicon.ico]
+[2019-09-13 12:17:19,371][Thread-20:8236][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /user/register/]
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\kombu\utils\__init__.py", line 423, in __call__
+    return self.__value__
+AttributeError: 'ChannelPromise' object has no attribute '__value__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\kombu\transport\virtual\__init__.py", line 789, in create_channel
+    return self._avail_channels.pop()
+IndexError: pop from empty list
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\redis\connection.py", line 484, in connect
+    sock = self._connect()
+  File "D:\python\lib\site-packages\redis\connection.py", line 541, in _connect
+    raise err
+  File "D:\python\lib\site-packages\redis\connection.py", line 529, in _connect
+    sock.connect(socket_address)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\redis\client.py", line 667, in execute_command
+    connection.send_command(*args)
+  File "D:\python\lib\site-packages\redis\connection.py", line 610, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "D:\python\lib\site-packages\redis\connection.py", line 585, in send_packed_command
+    self.connect()
+  File "D:\python\lib\site-packages\redis\connection.py", line 489, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10060 connecting to 192.168.17.1:6379. 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\kombu\transport\redis.py", line 464, in __init__
+    self.client.info()
+  File "D:\python\lib\site-packages\redis\client.py", line 760, in info
+    return self.execute_command('INFO')
+  File "D:\python\lib\site-packages\redis\client.py", line 670, in execute_command
+    connection.disconnect()
+  File "D:\python\lib\site-packages\kombu\transport\redis.py", line 866, in disconnect
+    channel._on_connection_disconnect(self)
+  File "D:\python\lib\site-packages\kombu\transport\redis.py", line 496, in _on_connection_disconnect
+    self._disconnect_pools()
+  File "D:\python\lib\site-packages\kombu\transport\redis.py", line 484, in _disconnect_pools
+    self._async_pool.disconnect()
+  File "D:\python\lib\site-packages\redis\connection.py", line 998, in disconnect
+    connection.disconnect()
+  File "D:\python\lib\site-packages\kombu\transport\redis.py", line 866, in disconnect
+    channel._on_connection_disconnect(self)
+  File "D:\python\lib\site-packages\kombu\transport\redis.py", line 498, in _on_connection_disconnect
+    raise get_redis_ConnectionError()
+redis.exceptions.ConnectionError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\kombu\connection.py", line 449, in _ensured
+    return fun(*args, **kwargs)
+  File "D:\python\lib\site-packages\kombu\messaging.py", line 177, in _publish
+    channel = self.channel
+  File "D:\python\lib\site-packages\kombu\messaging.py", line 194, in _get_channel
+    channel = self._channel = channel()
+  File "D:\python\lib\site-packages\kombu\utils\__init__.py", line 425, in __call__
+    value = self.__value__ = self.__contract__()
+  File "D:\python\lib\site-packages\kombu\messaging.py", line 209, in <lambda>
+    channel = ChannelPromise(lambda: connection.default_channel)
+  File "D:\python\lib\site-packages\kombu\connection.py", line 771, in default_channel
+    self.connection
+  File "D:\python\lib\site-packages\kombu\connection.py", line 756, in connection
+    self._connection = self._establish_connection()
+  File "D:\python\lib\site-packages\kombu\connection.py", line 711, in _establish_connection
+    conn = self.transport.establish_connection()
+  File "D:\python\lib\site-packages\kombu\transport\virtual\__init__.py", line 809, in establish_connection
+    self._avail_channels.append(self.create_channel(self))
+  File "D:\python\lib\site-packages\kombu\transport\virtual\__init__.py", line 791, in create_channel
+    channel = self.Channel(connection)
+  File "D:\python\lib\site-packages\kombu\transport\redis.py", line 466, in __init__
+    self._disconnect_pools()
+  File "D:\python\lib\site-packages\kombu\transport\redis.py", line 484, in _disconnect_pools
+    self._async_pool.disconnect()
+  File "D:\python\lib\site-packages\redis\connection.py", line 998, in disconnect
+    connection.disconnect()
+  File "D:\python\lib\site-packages\kombu\transport\redis.py", line 866, in disconnect
+    channel._on_connection_disconnect(self)
+  File "D:\python\lib\site-packages\kombu\transport\redis.py", line 498, in _on_connection_disconnect
+    raise get_redis_ConnectionError()
+redis.exceptions.ConnectionError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\kombu\transport\virtual\__init__.py", line 789, in create_channel
+    return self._avail_channels.pop()
+IndexError: pop from empty list
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\redis\connection.py", line 484, in connect
+    sock = self._connect()
+  File "D:\python\lib\site-packages\redis\connection.py", line 541, in _connect
+    raise err
+  File "D:\python\lib\site-packages\redis\connection.py", line 529, in _connect
+    sock.connect(socket_address)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\redis\client.py", line 667, in execute_command
+    connection.send_command(*args)
+  File "D:\python\lib\site-packages\redis\connection.py", line 610, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "D:\python\lib\site-packages\redis\connection.py", line 585, in send_packed_command
+    self.connect()
+  File "D:\python\lib\site-packages\redis\connection.py", line 489, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10060 connecting to 192.168.17.1:6379. 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\kombu\transport\redis.py", line 464, in __init__
+    self.client.info()
+  File "D:\python\lib\site-packages\redis\client.py", line 760, in info
+    return self.execute_command('INFO')
+  File "D:\python\lib\site-packages\redis\client.py", line 670, in execute_command
+    connection.disconnect()
+  File "D:\python\lib\site-packages\kombu\transport\redis.py", line 866, in disconnect
+    channel._on_connection_disconnect(self)
+  File "D:\python\lib\site-packages\kombu\transport\redis.py", line 496, in _on_connection_disconnect
+    self._disconnect_pools()
+  File "D:\python\lib\site-packages\kombu\transport\redis.py", line 484, in _disconnect_pools
+    self._async_pool.disconnect()
+  File "D:\python\lib\site-packages\redis\connection.py", line 998, in disconnect
+    connection.disconnect()
+  File "D:\python\lib\site-packages\kombu\transport\redis.py", line 866, in disconnect
+    channel._on_connection_disconnect(self)
+  File "D:\python\lib\site-packages\kombu\transport\redis.py", line 498, in _on_connection_disconnect
+    raise get_redis_ConnectionError()
+redis.exceptions.ConnectionError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\python\lib\site-packages\django\views\generic\base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "A:\XM\blogtwo\user\views.py", line 140, in post
+    send_register_active_email.delay(user, token)
+  File "D:\python\lib\site-packages\celery\app\task.py", line 461, in delay
+    return self.apply_async(args, kwargs)
+  File "D:\python\lib\site-packages\celery\app\task.py", line 573, in apply_async
+    **dict(self._get_exec_options(), **options)
+  File "D:\python\lib\site-packages\celery\app\base.py", line 354, in send_task
+    reply_to=reply_to or self.oid, **options
+  File "D:\python\lib\site-packages\celery\app\amqp.py", line 310, in publish_task
+    **kwargs
+  File "D:\python\lib\site-packages\kombu\messaging.py", line 172, in publish
+    routing_key, mandatory, immediate, exchange, declare)
+  File "D:\python\lib\site-packages\kombu\connection.py", line 470, in _ensured
+    interval_max)
+  File "D:\python\lib\site-packages\kombu\connection.py", line 382, in ensure_connection
+    interval_start, interval_step, interval_max, callback)
+  File "D:\python\lib\site-packages\kombu\utils\__init__.py", line 246, in retry_over_time
+    return fun(*args, **kwargs)
+  File "D:\python\lib\site-packages\kombu\connection.py", line 250, in connect
+    return self.connection
+  File "D:\python\lib\site-packages\kombu\connection.py", line 756, in connection
+    self._connection = self._establish_connection()
+  File "D:\python\lib\site-packages\kombu\connection.py", line 711, in _establish_connection
+    conn = self.transport.establish_connection()
+  File "D:\python\lib\site-packages\kombu\transport\virtual\__init__.py", line 809, in establish_connection
+    self._avail_channels.append(self.create_channel(self))
+  File "D:\python\lib\site-packages\kombu\transport\virtual\__init__.py", line 791, in create_channel
+    channel = self.Channel(connection)
+  File "D:\python\lib\site-packages\kombu\transport\redis.py", line 466, in __init__
+    self._disconnect_pools()
+  File "D:\python\lib\site-packages\kombu\transport\redis.py", line 484, in _disconnect_pools
+    self._async_pool.disconnect()
+  File "D:\python\lib\site-packages\redis\connection.py", line 998, in disconnect
+    connection.disconnect()
+  File "D:\python\lib\site-packages\kombu\transport\redis.py", line 866, in disconnect
+    channel._on_connection_disconnect(self)
+  File "D:\python\lib\site-packages\kombu\transport\redis.py", line 498, in _on_connection_disconnect
+    raise get_redis_ConnectionError()
+redis.exceptions.ConnectionError
+[2019-09-13 12:49:08,901][Thread-18:5328][task_id:django.request][base.py:152][WARNING][Not Found: /pc-geetest/register]
+[2019-09-13 12:49:09,087][Thread-21:2420][task_id:django.request][base.py:152][WARNING][Not Found: /favicon.ico]
+[2019-09-13 12:52:14,975][Thread-4:12000][task_id:django.request][base.py:152][WARNING][Not Found: /pc-geetest/register]
+[2019-09-18 10:41:57,789][Thread-1:10704][task_id:django.request][base.py:152][WARNING][Not Found: /]
+[2019-09-18 10:42:01,063][Thread-3:2768][task_id:django.request][base.py:152][WARNING][Not Found: /favicon.ico]
+[2019-09-18 11:01:19,025][Thread-26:6220][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /index/]
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\python\lib\site-packages\django\views\generic\base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "A:\XM\blogtwo\article\views.py", line 29, in get
+    article_list = models.Article.objects.all()
+AttributeError: module 'django.db.models' has no attribute 'Article'
+[2019-09-18 11:03:57,214][Thread-1:1920][task_id:django.request][base.py:152][WARNING][Not Found: /article/add/]
+[2019-09-18 11:04:56,572][Thread-1:2412][task_id:django.request][base.py:152][WARNING][Not Found: /article/add/]
+[2019-09-18 11:04:57,544][Thread-3:12184][task_id:django.request][base.py:152][WARNING][Not Found: /article/add/]
+[2019-09-18 11:07:44,317][Thread-8:11880][task_id:django.request][base.py:152][WARNING][Not Found: /index/]
+[2019-09-18 11:10:51,134][Thread-8:6788][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /article/index/]
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\python\lib\site-packages\django\views\generic\base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "A:\XM\blogtwo\article\views.py", line 29, in get
+    article_list = models.Article.objects.all()
+AttributeError: module 'django.db.models' has no attribute 'Article'
+[2019-09-18 11:12:49,680][Thread-20:10632][task_id:django.request][base.py:93][WARNING][Method Not Allowed (POST): /article/upload/]
+[2019-09-18 11:13:06,692][Thread-21:5656][task_id:django.request][base.py:93][WARNING][Method Not Allowed (POST): /article/upload/]
+[2019-09-18 11:13:13,025][Thread-22:5964][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /article/add/]
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\python\lib\site-packages\django\views\generic\base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "A:\XM\blogtwo\article\views.py", line 56, in post
+    article_obj = models.Article.objects.create(user=user, title=title, desc=desc)
+AttributeError: module 'django.db.models' has no attribute 'Article'
+[2019-09-18 11:18:34,418][Thread-4:11724][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /article/index/]
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\python\lib\site-packages\django\views\generic\base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "A:\XM\blogtwo\article\views.py", line 30, in get
+    article_list = models.Article.objects.all()
+AttributeError: module 'django.db.models' has no attribute 'Article'
+[2019-09-18 11:19:09,320][Thread-11:13104][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /article/index/]
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\python\lib\site-packages\django\views\generic\base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "A:\XM\blogtwo\article\views.py", line 30, in get
+    article_list = models.Article.objects.all()
+AttributeError: module 'django.db.models' has no attribute 'Article'
+[2019-09-18 11:19:38,109][Thread-16:11316][task_id:django.request][base.py:93][WARNING][Method Not Allowed (POST): /article/upload/]
+[2019-09-18 11:19:44,070][Thread-17:12948][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /article/add/]
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\python\lib\site-packages\django\views\generic\base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "A:\XM\blogtwo\article\views.py", line 57, in post
+    article_obj = models.Article.objects.create(user=user, title=title, desc=desc)
+AttributeError: module 'django.db.models' has no attribute 'Article'
+[2019-09-18 11:23:07,035][Thread-10:8888][task_id:django.request][base.py:152][WARNING][Not Found: /media/avatars/27.jpg]
+[2019-09-18 11:23:19,604][Thread-13:11544][task_id:django.request][base.py:152][WARNING][Not Found: /blog/luoxianbo/article/1/]
+[2019-09-18 11:24:00,204][Thread-14:11456][task_id:django.request][base.py:152][WARNING][Not Found: /blog/luoxianbo/article/1/]
+[2019-09-18 11:32:40,465][Thread-3:14148][task_id:django.request][base.py:152][WARNING][Not Found: /media/avatars/27.jpg]
+[2019-09-18 11:32:41,866][Thread-5:5780][task_id:django.request][base.py:152][WARNING][Not Found: /media/avatars/27.jpg]
+[2019-09-18 11:32:42,441][Thread-7:10708][task_id:django.request][base.py:152][WARNING][Not Found: /media/avatars/27.jpg]
+[2019-09-18 11:32:46,236][Thread-9:2732][task_id:django.request][base.py:152][WARNING][Not Found: /media/avatars/27.jpg]
+[2019-09-18 11:34:28,098][Thread-23:15140][task_id:django.request][base.py:93][WARNING][Method Not Allowed (POST): /article/upload/]
+[2019-09-18 11:34:42,417][Thread-27:15192][task_id:django.request][base.py:152][WARNING][Not Found: /media/avatars/27.jpg]
+[2019-09-18 11:43:20,180][Thread-5:13228][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /article/search/]
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python\lib\site-packages\haystack\views.py", line 51, in __call__
+    return self.create_response()
+  File "D:\python\lib\site-packages\haystack\views.py", line 152, in create_response
+    return render(self.request, self.template, context)
+  File "D:\python\lib\site-packages\django\shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\python\lib\site-packages\django\template\loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\python\lib\site-packages\django\template\loader.py", line 25, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: search/search.html
+[2019-09-18 11:43:37,977][Thread-6:9148][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /article/search/]
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python\lib\site-packages\haystack\views.py", line 51, in __call__
+    return self.create_response()
+  File "D:\python\lib\site-packages\haystack\views.py", line 152, in create_response
+    return render(self.request, self.template, context)
+  File "D:\python\lib\site-packages\django\shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\python\lib\site-packages\django\template\loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\python\lib\site-packages\django\template\loader.py", line 25, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: search/search.html
+[2019-09-18 11:53:31,660][Thread-4:10512][task_id:django.request][base.py:152][WARNING][Not Found: /media/avatars/27.jpg]
+[2019-09-18 11:54:01,978][Thread-13:6716][task_id:django.request][base.py:152][WARNING][Not Found: /search]
+[2019-09-18 12:00:13,967][Thread-21:14624][task_id:django.request][base.py:152][WARNING][Not Found: /media/avatars/27.jpg]
+[2019-09-18 12:06:09,146][Thread-3:15332][task_id:django.request][base.py:152][WARNING][Not Found: /media/avatars/27.jpg]
+[2019-09-18 12:17:03,624][Thread-3:5200][task_id:django.request][base.py:152][WARNING][Not Found: /media/avatars/27.jpg]
+[2019-09-18 12:17:09,076][Thread-5:14480][task_id:django.request][base.py:152][WARNING][Not Found: /media/avatars/27.jpg]
+[2019-09-18 12:18:13,433][Thread-10:8464][task_id:django.request][base.py:152][WARNING][Not Found: /media/avatars/27.jpg]
+[2019-09-18 12:25:12,732][Thread-17:15804][task_id:django.request][base.py:152][WARNING][Not Found: /media/avatars/27.jpg]
+[2019-09-18 12:25:16,355][Thread-19:15812][task_id:django.request][base.py:152][WARNING][Not Found: /media/avatars/27.jpg]
+[2019-09-18 12:25:34,299][Thread-22:15856][task_id:django.request][base.py:152][WARNING][Not Found: /media/avatars/27.jpg]
+[2019-09-18 12:26:03,943][Thread-32:15936][task_id:django.request][base.py:152][WARNING][Not Found: /media/avatars/27.jpg]
+[2019-09-18 15:34:20,095][Thread-3:13396][task_id:django.request][base.py:152][WARNING][Not Found: /favicon.ico]
+[2019-09-18 15:38:30,992][Thread-26:11176][task_id:django.request][base.py:93][WARNING][Method Not Allowed (POST): /article/upload/]
+[2019-09-18 15:38:51,259][Thread-27:15416][task_id:django.request][base.py:93][WARNING][Method Not Allowed (POST): /article/upload/]
+[2019-09-18 15:45:03,181][Thread-13:14624][task_id:django.request][base.py:152][WARNING][Not Found: /article/media/article_add_img/25.jpg]
+[2019-09-18 15:45:15,336][Thread-15:12904][task_id:django.request][base.py:152][WARNING][Not Found: /article/media/article_add_img/15.jpg]
+[2019-09-18 15:45:37,212][Thread-17:1568][task_id:django.request][base.py:152][WARNING][Not Found: /article/media/article_add_img/15.jpg]
+[2019-09-18 15:51:20,943][Thread-18:10496][task_id:django.request][base.py:152][WARNING][Not Found: /article/media/article_add_img/15.jpg]
+[2019-09-18 15:52:32,049][Thread-8:2288][task_id:django.request][base.py:152][WARNING][Not Found: /article/media/article_add_img/37.jpg]
+[2019-09-18 15:55:59,417][Thread-8:16128][task_id:django.request][base.py:152][WARNING][Not Found: /media/article_add_img/15.jpg]
+[2019-09-18 15:56:12,637][Thread-10:5532][task_id:django.request][base.py:152][WARNING][Not Found: /media/article_add_img/64.jpg]
+[2019-09-18 15:56:29,197][Thread-15:12096][task_id:django.request][base.py:152][WARNING][Not Found: /media/article_add_img/15.jpg]
+[2019-09-18 15:56:29,198][Thread-16:14936][task_id:django.request][base.py:152][WARNING][Not Found: /media/article_add_img/64.jpg]
+[2019-09-18 15:57:28,274][Thread-19:14944][task_id:django.request][base.py:152][WARNING][Not Found: /media/article_add_img/64.jpg]
+[2019-09-18 16:08:50,470][Thread-10:6372][task_id:django.request][base.py:152][WARNING][Not Found: /media/article_add_img/16.jpg]
+[2019-09-18 16:09:33,461][Thread-12:15404][task_id:django.request][base.py:152][WARNING][Not Found: /media/article_add_img/22.jpg]
+[2019-09-18 16:14:08,670][Thread-13:992][task_id:django.request][base.py:152][WARNING][Not Found: /media/article_add_img/64.jpg]
+[2019-09-18 16:16:31,113][Thread-12:10476][task_id:django.request][base.py:152][WARNING][Not Found: /article/media/avatars/27.jpg]
+[2019-09-18 16:16:47,060][Thread-18:12272][task_id:django.request][base.py:152][WARNING][Not Found: /article/media/avatars/27.jpg]
